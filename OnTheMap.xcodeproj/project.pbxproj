@@ -12,6 +12,7 @@
 		613D210920FD12D00079B120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613D210720FD12D00079B120 /* Main.storyboard */; };
 		613D210B20FD12D20079B120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 613D210A20FD12D20079B120 /* Assets.xcassets */; };
 		613D210E20FD12D20079B120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 613D210C20FD12D20079B120 /* LaunchScreen.storyboard */; };
+		613D211720FD13310079B120 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 613D211620FD13310079B120 /* Log.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		613D210A20FD12D20079B120 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		613D210D20FD12D20079B120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		613D210F20FD12D20079B120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		613D211620FD13310079B120 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		613D210220FD12D00079B120 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				613D210320FD12D00079B120 /* AppDelegate.swift */,
+				613D210F20FD12D20079B120 /* Info.plist */,
+				613D211520FD12F40079B120 /* Support */,
 				613D210520FD12D00079B120 /* ViewController.swift */,
 				613D210720FD12D00079B120 /* Main.storyboard */,
-				613D210A20FD12D20079B120 /* Assets.xcassets */,
-				613D210C20FD12D20079B120 /* LaunchScreen.storyboard */,
-				613D210F20FD12D20079B120 /* Info.plist */,
 			);
 			path = OnTheMap;
+			sourceTree = "<group>";
+		};
+		613D211520FD12F40079B120 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				613D210C20FD12D20079B120 /* LaunchScreen.storyboard */,
+				613D210A20FD12D20079B120 /* Assets.xcassets */,
+				613D210320FD12D00079B120 /* AppDelegate.swift */,
+				613D211620FD13310079B120 /* Log.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +148,7 @@
 			files = (
 				613D210620FD12D00079B120 /* ViewController.swift in Sources */,
 				613D210420FD12D00079B120 /* AppDelegate.swift in Sources */,
+				613D211720FD13310079B120 /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

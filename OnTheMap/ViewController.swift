@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import os.log
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        os_log("%@ %@", log: Log.general, type: .debug, self, #function)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
