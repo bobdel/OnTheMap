@@ -126,7 +126,11 @@
                         <viewLayoutGuide key="safeArea" id="uBJ-P2-KVW"/>
                     </view>
                     <navigationItem key="navigationItem" title="On The Map" id="ykz-BL-2Xr">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="a3H-si-BTQ"/>
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="a3H-si-BTQ">
+                            <connections>
+                                <action selector="logout:" destination="QcJ-nv-2hc" id="kpH-Wa-BWn"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="add" id="FEL-Rd-1hT">
                                 <connections>
@@ -154,7 +158,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Temp"/>
                                 <connections>
-                                    <segue destination="a5Y-2s-wQV" kind="presentation" id="HW8-Ct-NYs"/>
+                                    <segue destination="a5Y-2s-wQV" kind="presentation" identifier="revealTabBarController" id="HW8-Ct-NYs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6d-G7-Omu">
@@ -175,6 +179,9 @@
                                 <rect key="frame" x="166" y="325" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="login:" destination="Oh1-SZ-Sqj" eventType="touchUpInside" id="c08-sr-35t"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pmr-ll-AI4">
                                 <rect key="frame" x="16" y="505" width="343" height="30"/>
@@ -192,7 +199,6 @@
                         <viewLayoutGuide key="safeArea" id="ql2-SP-eRu"/>
                     </view>
                     <connections>
-                        <outlet property="login" destination="ReJ-Yk-gz9" id="vjF-TF-4d2"/>
                         <outlet property="password" destination="rQd-Xw-XbZ" id="Wi4-LE-Vhv"/>
                         <outlet property="tempStatus" destination="Pmr-ll-AI4" id="Zda-Zc-ARo"/>
                         <outlet property="username" destination="o6d-G7-Omu" id="GjF-9n-WtI"/>
@@ -242,7 +248,6 @@
         <!--Navigation Controller-->
         <scene sceneID="2RL-bP-KI6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6D3-To-YXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mCG-cT-rM4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="icon_listview-deselected" selectedImage="icon_listview-selected" id="Pxe-h6-3gE"/>
                     <toolbarItems/>
@@ -255,6 +260,7 @@
                         <segue destination="UV7-Qs-Mfa" kind="relationship" relationship="rootViewController" id="gGo-0V-3KC"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6D3-To-YXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="485.60000000000002" y="471.8140929535233"/>
         </scene>

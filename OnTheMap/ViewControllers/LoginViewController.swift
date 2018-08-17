@@ -17,15 +17,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var tempStatus: UITextField!
 
-    @IBOutlet weak var login: UIButton!
-    
+    @IBAction func login(_ sender: UIButton) {
+        os_log("%@ %@", log: Log.general, type: .debug, self, #function)
+        UdacityClient.sharedInstance.authenticate(username.text!, password.text!) {sessionID in
+            DispatchQueue.main.async {
+                if sessionID != nil {
+                    self.performSegue(withIdentifier: "revealTabBarController", sender: sender)
+                } else {
+                    self.tempStatus.text = "Login Failed"
+                }
+            }
+        }
+    }
+
 
     // MARK: ViewController Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         os_log("%@ %@", log: Log.general, type: .debug, self, #function)
-        // Do any additional setup after loading the view.
     }
 
 }

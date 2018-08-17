@@ -11,6 +11,10 @@ import os.log
 
 class LocationMapViewController: UIViewController {
 
+    @IBAction func logout(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+        UdacityClient.sharedInstance.sessionID = nil
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         os_log("%@ %@", log: Log.general, type: .debug, self, #function)
